@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANA</title>
+      <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- ===== SECCIÓN: Encabezado / Banner ===== -->
+<header class="ch-banner">
+  <div class="ch-banner__top">
+    <div class="ch-banner__logo">
+      <a href="index.html">
+        <img src="imagenes/logo.png" alt="COOPAC VOLCÁN">
+      </a>
+    </div>
+    <div class="ch-banner__search">
+      <input type="text" placeholder="Buscar..." id="search-input">
+      <button id="search-btn">🔍</button>
+    </div>
+    <!-- Botón hamburguesa dentro del banner -->
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+<!-- ===== SECCIÓN: Navegación ===== -->
+<nav class="ch-nav">
+  <ul class="ch-nav__menu">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="nosotros.php">Nosotros</a></li>
+    <li class="has-submenu">
+  <a href="#" class="submenu-toggle">Servicios</a>
+  <div class="submenu">
+    <a href="creditos.php"><span>💳</span><span>Créditos</span></a>
+    <a href="ahorros.php"><span>🐷</span><span>Ahorros</span></a>
+    <a href="PrevisionSocial.php"><span>🛡️</span><span>Previsión Social</span></a>
+  </div>
+</li>
+    <li><a href="convenios.php">galeria</a></li>
+    <li><a href="#">Te Contactamos</a></li>
+  </ul>
+</nav>
+</header>
+    <!-- ===== SECCIÓN: Slider ===== -->
+    <div class="slider">
+      <div class="slides">
+        <div class="slide active">
+          <img src="https://www.banbif.com.pe/Portals/0/home/personas/section/img/banner-duo-genial-2.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="https://www.banbif.com.pe/Portals/0/home/personas/section/img/banner-apertura-de-cuenta-digital-21.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="https://www.banbif.com.pe/Portals/0/home/personas/section/img/banner-ruleta-2.png" alt="">
+        </div>
+      </div>
+      <div class="nav-controls">
+        <button class="nav prev">‹</button>
+        <button class="nav next">›</button>
+      </div>
+      <div class="dots"></div>
+    </div>
+  </header>
+</body>
+</html>
