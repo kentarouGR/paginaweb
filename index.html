@@ -1,100 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOTEL</title>
-      <link rel="stylesheet" href="styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Presidente Huancayo</title>
+  <meta name="description" content="Hotel Presidente en Huancayo: confort, buena ubicación y excelente atención. Reserva online rápido y sencillo.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- ===== SECCIÓN: Encabezado / Banner ===== -->
-<header class="ch-banner">
-  <div class="ch-banner__top">
-    <div class="ch-banner__logo">
-      <a href="index.html">
-        <img src="imagenes/logo.png" alt="HOTEL">
-      </a>
-    </div>
-    <div class="ch-banner__search">
-      <input type="text" placeholder="Buscar..." id="search-input">
-      <button id="search-btn">🔍</button>
-    </div>
-<!-- ===== SECCIÓN: Navegación ===== -->
-<nav class="ch-nav">
-  <ul class="ch-nav__menu">
-    <li><a href="#">Inicio</a></li>
-    <li><a href="nosotros.php">Nosotros</a></li>
-    <li class="has-submenu">
-  <a href="#" class="submenu-toggle">Servicios</a>
-  <div class="submenu">
-    <a href="creditos.php"><span>💳</span><span>Créditos</span></a>
-    <a href="ahorros.php"><span>🐷</span><span>Ahorros</span></a>
-    <a href="PrevisionSocial.php"><span>🛡️</span><span>Previsión Social</span></a>
-  </div>
-</li>
-    <li><a href="convenios.php">galeria</a></li>
-    <li><a href="#">Te Contactamos</a></li>
-  </ul>
-</nav>
-</header>
-    <!-- ===== SECCIÓN: Slider ===== -->
-    <div class="slider">
-      <div class="slides">
-        <div class="slide active">
-          <img src="https://www.banbif.com.pe/Portals/0/home/personas/section/img/banner-duo-genial-2.png" alt="">
-        </div>
-        <div class="slide">
-          <img src="https://www.banbif.com.pe/Portals/0/home/personas/section/img/banner-apertura-de-cuenta-digital-21.png" alt="">
-        </div>
-        <div class="slide">
-          <img src="https://www.banbif.com.pe/Portals/0/home/personas/section/img/banner-ruleta-2.png" alt="">
-        </div>
+  <!-- ===== ENCABEZADO ===== -->
+  <header class="ch-banner">
+    <div class="ch-banner__top">
+      <div class="ch-banner__logo">
+        <a href="index.html">
+          <img src="imagenes/logo.png" alt="Logo Hotel Presidente Huancayo">
+        </a>
       </div>
-      <div class="nav-controls">
-        <button class="nav prev">‹</button>
-        <button class="nav next">›</button>
+      <div class="ch-banner__search">
+        <input type="text" placeholder="Buscar..." id="search-input">
+        <button id="search-btn">🔍</button>
       </div>
-      <div class="dots"></div>
     </div>
+
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav class="ch-nav">
+      <button class="menu-toggle">☰</button>
+      <ul class="ch-nav__menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="nosotros.php">Nosotros</a></li>
+        <li class="has-submenu">
+          <a href="#" class="submenu-toggle">Servicios</a>
+          <div class="submenu">
+            <a href="creditos.php"><span>💳</span><span>Créditos</span></a>
+            <a href="ahorros.php"><span>🐷</span><span>Ahorros</span></a>
+            <a href="PrevisionSocial.php"><span>🛡️</span><span>Previsión Social</span></a>
+          </div>
+        </li>
+        <li><a href="convenios.php">Galería</a></li>
+        <li><a href="#reserva">Reservar</a></li>
+        <li><a href="#contacto">Te Contactamos</a></li>
+      </ul>
+    </nav>
   </header>
-<!--SECCION NOSOTROS -->
-  <section class="Servicios">
-    <div class="section linear">
-              <h3 class="titleSec text-center"><strong class="color-degradado">Planificador de viajes rápido y sencillo</strong></h3>
-      <h5 class="titlePrin text-center">Elige un estilo y descubre los principales destinos en Perú</h5>
-      <div class="content-card-white-flex">
-        <a class="card-white-short" href="http://localhost/COOPAC392/creditos.php">
-          <img class="card-white-short_img" src="https://www.banbif.com.pe/Portals/0/home/personas/img/internas/ico-cart.svg" alt="Ahorro">
-          <p class="card-white-short_title">
-            <strong>Hotel Presidente Huancayo</strong><br>
-Tiene un </span><span class="b">restaurante</span><span> con dos cartas (comida china y comida criolla), aun que me gustaría que tengan comida regional también</p>
-        </a>
-        <a class="card-white-short" href="http://localhost/COOPAC392/ahorros.php">
-          <img class="card-white-short_img" src="https://www.banbif.com.pe/Portals/0/home/personas/img/internas/ico-ahorro.svg" alt="Ahorros">
-          <p class="card-white-short_title">
-            <strong>Hotel Unu</strong><br>
-            Excelente Hotel, instalaciones en perfecto estado, desayuno bien variado, atención rápida y personal amable.  No está en el centro por lo que llegar es relativamente rápido por estar en zona de poco tráfico. tienen.
-          </p>
-        </a>
-        <a class="card-white-short" href="http://localhost/COOPAC392/PrevisionSocial.php">
-          <img class="card-white-short_img" src="https://www.banbif.com.pe/Portals/0/home/personas/img/internas/ico-all-card.svg" alt="Previsión">
-          <p class="card-white-short_title">
-            <strong> Hotel de Turistas Huancayo</strong><br>
-            Luego de su alianza con Casa Andina han remodelado toda la parte de recepción y restaurante, mejorando mucho. En las habitaciones aún hay mucho por mejorar en cuanto a servicios.
-          </p>
-        </a>
-        <a class="card-white-short" href="http://localhost/COOPAC392/convenios.php" target="_blank">
-          <img class="card-white-short_img" src="https://www.banbif.com.pe/Portals/0/home/personas/img/internas/ico-cts.svg" alt="Convenios">
-          <p class="card-white-short_title">
-            <strong>CONVENIOS</strong><br>
-            Infinidad de convenios con instituciones públicas y privadas.
-          </p>
-        </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido a <span class="resaltado">Hotel Presidente</span></h1>
+      <p>Tu mejor opción en Huancayo para descansar y disfrutar momentos únicos.</p>
+      <a href="#reserva" class="btn-reserva">✨ Reservar ahora</a>
+    </div>
+  </section>
+
+  <!-- ===== FORMULARIO RESERVA ===== -->
+  <section id="reserva" class="reserva">
+    <h2>Reserva rápida</h2>
+    <form>
+      <label for="entrada">Entrada</label>
+      <input type="date" id="entrada" name="entrada" required>
+      <label for="salida">Salida</label>
+      <input type="date" id="salida" name="salida" required>
+      <label for="personas">Personas</label>
+      <select id="personas" name="personas">
+        <option value="1">1 Persona</option>
+        <option value="2">2 Personas</option>
+        <option value="3">3 Personas</option>
+        <option value="4">4 Personas</option>
+      </select>
+      <button type="submit" class="btn">Buscar</button>
+    </form>
+  </section>
+
+  <!-- ===== HABITACIONES ===== -->
+  <section class="habitaciones">
+    <h2>Nuestras habitaciones</h2>
+    <div class="habitaciones-grid">
+      <div class="habitacion">
+        <img src="imagenes/hab1.jpg" alt="Habitación simple en Hotel Presidente">
+        <h3>Habitación Simple</h3>
+        <p>Desde <strong>$40</strong> por noche</p>
+        <a href="#reserva" class="btn">Reservar</a>
+      </div>
+      <div class="habitacion">
+        <img src="imagenes/hab2.jpg" alt="Habitación doble en Hotel Presidente">
+        <h3>Habitación Doble</h3>
+        <p>Desde <strong>$60</strong> por noche</p>
+        <a href="#reserva" class="btn">Reservar</a>
+      </div>
+      <div class="habitacion">
+        <img src="imagenes/hab3.jpg" alt="Suite ejecutiva en Hotel Presidente">
+        <h3>Suite Ejecutiva</h3>
+        <p>Desde <strong>$90</strong> por noche</p>
+        <a href="#reserva" class="btn">Reservar</a>
       </div>
     </div>
   </section>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section class="testimonios">
+    <h2>Lo que dicen nuestros huéspedes</h2>
+    <div class="testimonios-grid">
+      <div class="testimonio">
+        <p>"Excelente atención, desayuno variado y habitaciones cómodas. ⭐⭐⭐⭐⭐"</p>
+        <span>- Juan Pérez</span>
+      </div>
+      <div class="testimonio">
+        <p>"Muy buena ubicación y trato amable del personal. ⭐⭐⭐⭐"</p>
+        <span>- María López</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAPA ===== -->
+  <section class="mapa">
+    <h2>Ubicación</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-col">
+        <h3>Hotel Presidente</h3>
+        <p>📍 Jr. Principal 123, Huancayo - Perú</p>
+        <p>📞 (064) 123456</p>
+        <p>✉️ contacto@hotelpresidente.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.php">Nosotros</a></li>
+          <li><a href="creditos.php">Servicios</a></li>
+          <li><a href="convenios.php">Galería</a></li>
+          <li><a href="#reserva">Reservas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Suscríbete</h3>
+        <p>Recibe promociones y noticias en tu correo.</p>
+        <form class="newsletter">
+          <input type="email" placeholder="Tu correo">
+          <button type="submit">Suscribirme</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Hotel Presidente Huancayo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,44 +1,89 @@
-  // === SLIDER PRINCIPAL ===
-  const slides = document.querySelectorAll(".slide");
-  const dotsContainer = document.querySelector(".dots");
+// ==================== SLIDER ====================
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.querySelector(".nav.prev");
+const nextBtn = document.querySelector(".nav.next");
+const dotsContainer = document.querySelector(".dots");
 
-  if (slides.length && dotsContainer) {
-    let current = 0, timer;
+let currentIndex = 0;
 
-    slides.forEach((_, i) => {
-      const dot = document.createElement("div");
-      dot.className = "dot";
-      dot.addEventListener("click", () => goToSlide(i));
-      dotsContainer.appendChild(dot);
-    });
+// Crear los dots dinámicamente
+slides.forEach((_, index) => {
+  const dot = document.createElement("span");
+  dot.classList.add("dot");
+  if (index === 0) dot.classList.add("active");
+  dotsContainer.appendChild(dot);
 
-    const dots = Array.from(dotsContainer.children);
+  dot.addEventListener("click", () => {
+    showSlide(index);
+  });
+});
 
-    const render = () => {
-      slides.forEach((s, i) => {
-        s.classList.toggle("active", i === current);
-        dots[i].classList.toggle("active", i === current);
-      });
-      document.querySelector(".slides").style.transform = `translateX(-${current * 100}%)`;
-    };
+const dots = document.querySelectorAll(".dot");
 
-    const goToSlide = i => {
-      current = i;
-      render();
-      resetTimer();
-    };
+// Mostrar slide por índice
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+    dots[i].classList.toggle("active", i === index);
+  });
+  currentIndex = index;
+}
 
-    const nextSlide = () => goToSlide((current + 1) % slides.length);
-    const resetTimer = () => {
-      clearTimeout(timer);
-      timer = setTimeout(nextSlide, 8000);
-    };
+// Botón anterior
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+});
 
-    document.querySelector(".prev")?.addEventListener("click", () =>
-      goToSlide((current - 1 + slides.length) % slides.length)
-    );
-    document.querySelector(".next")?.addEventListener("click", nextSlide);
+// Botón siguiente
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+});
 
-    render();
-    resetTimer();
-  }
+// Auto play
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}, 5000); // cada 5 segundos
+
+
+// ==================== MENÚ MÓVIL ====================
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+
+// ==================== SUBMENÚ ====================
+const servicios = document.querySelector(".has-submenu > a");
+if (servicios) {
+  servicios.addEventListener("click", (e) => {
+    e.preventDefault(); // evitar que redireccione
+    const submenu = servicios.nextElementSibling;
+    submenu.classList.toggle("active");
+  });
+}
+
+
+// ==================== FORMULARIO RESERVA ====================
+// (Validación simple)
+const reservaForm = document.querySelector(".reserva form");
+if (reservaForm) {
+  reservaForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const entrada = document.querySelector("#entrada").value;
+    const salida = document.querySelector("#salida").value;
+
+    if (entrada >= salida) {
+      alert("La fecha de salida debe ser mayor a la de entrada.");
+      return;
+    }
+
+    alert("✅ Reserva realizada con éxito");
+    reservaForm.reset();
+  });
+}
