@@ -1,166 +1,409 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotel Presidente Huancayo</title>
-  <meta name="description" content="Hotel Presidente en Huancayo: confort, buena ubicación y excelente atención. Reserva online rápido y sencillo.">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roshi Gamer — Centro Gamer Presidente Huancayo</title>
+  <meta name="description" content="Roshi Gamer: cabinas PC, PlayStation, torneos, snacks y segundo piso VIP. Reserva y tarifas." />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Matrix canvas (efecto fondo) -->
+  <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+
   <!-- ===== ENCABEZADO ===== -->
   <header class="ch-banner">
-    <div class="ch-banner__top">
+    <div class="ch-banner__top container">
       <div class="ch-banner__logo">
-        <a href="index.html">
-          <img src="imagenes/logo.png" alt="Logo Hotel Presidente Huancayo">
-        </a>
+        <a href="index.html"><img src="imagenes/logo.png" alt="Logo Roshi Gamer" /></a>
+        <div class="brand">
+          <span class="brand-name">Roshi Gamer</span>
+          <small class="brand-sub">Huanacayo</small>
+        </div>
       </div>
-      <div class="ch-banner__search">
-        <input type="text" placeholder="Buscar..." id="search-input">
-        <button id="search-btn">🔍</button>
-      </div>
-    </div>
-
-    <!-- ===== NAVEGACIÓN ===== -->
+    <!-- NAVEGACIÓN -->
     <nav class="ch-nav">
-      <button class="menu-toggle">☰</button>
-      <ul class="ch-nav__menu">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="nosotros.php">Nosotros</a></li>
-        <li class="has-submenu">
-          <a href="#" class="submenu-toggle">Servicios</a>
-          <div class="submenu">
-            <a href="creditos.php"><span>💳</span><span>Créditos</span></a>
-            <a href="ahorros.php"><span>🐷</span><span>Ahorros</span></a>
-            <a href="PrevisionSocial.php"><span>🛡️</span><span>Previsión Social</span></a>
-          </div>
-        </li>
-        <li><a href="convenios.php">Galería</a></li>
-        <li><a href="#reserva">Reservar</a></li>
-        <li><a href="#contacto">Te Contactamos</a></li>
-      </ul>
+      <div class="container nav-row">
+        <button class="menu-toggle" aria-label="abrir menú"><i class="fas fa-bars"></i></button>
+        <ul class="ch-nav__menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#pc-zone">PCs</a></li>
+          <li><a href="#play-zone">PlayStation</a></li>
+          <li class="has-submenu">
+            <a href="#servicios" class="submenu-toggle">Servicios <i class="fas fa-caret-down"></i></a>
+            <div class="submenu">
+              <a href="#pc-zone"><i class="fas fa-desktop"></i> PCs Gamer</a>
+              <a href="#torneos"><i class="fas fa-trophy"></i> Torneos</a>
+              <a href="#streaming"><i class="fas fa-video"></i> Cabinas Streaming</a>
+              <a href="#snacks"><i class="fas fa-cookie-bite"></i> Máquina expendedora</a>
+            </div>
+          </li>
+          <li><a href="#tarifas">Tarifas</a></li>
+          <li><a href="#segundo-piso">2º Piso</a></li>
+          <li><a href="#reserva" class="btn-cta"><i class="fas fa-calendar-check"></i> Agendar</a></li>
+        </ul>
+
+        <!-- quick social -->
+        <div class="nav-social">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
     </nav>
   </header>
 
   <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Bienvenido a <span class="resaltado">Hotel Presidente</span></h1>
-      <p>Tu mejor opción en Huancayo para descansar y disfrutar momentos únicos.</p>
-      <a href="#reserva" class="btn-reserva">✨ Reservar ahora</a>
-    </div>
-  </section>
-
-  <!-- ===== FORMULARIO RESERVA ===== -->
-  <section id="reserva" class="reserva">
-    <h2>Reserva rápida</h2>
-    <form>
-      <label for="entrada">Entrada</label>
-      <input type="date" id="entrada" name="entrada" required>
-      <label for="salida">Salida</label>
-      <input type="date" id="salida" name="salida" required>
-      <label for="personas">Personas</label>
-      <select id="personas" name="personas">
-        <option value="1">1 Persona</option>
-        <option value="2">2 Personas</option>
-        <option value="3">3 Personas</option>
-        <option value="4">4 Personas</option>
-      </select>
-      <button type="submit" class="btn">Buscar</button>
-    </form>
-  </section>
-
-  <!-- ===== HABITACIONES ===== -->
-  <section class="habitaciones">
-    <h2>Nuestras habitaciones</h2>
-    <div class="habitaciones-grid">
-      <div class="habitacion">
-        <img src="imagenes/hab1.jpg" alt="Habitación simple en Hotel Presidente">
-        <h3>Habitación Simple</h3>
-        <p>Desde <strong>$40</strong> por noche</p>
-        <a href="#reserva" class="btn">Reservar</a>
+  <section id="inicio" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Bienvenido a <span class="resaltado">Roshi Gamer</span></h1>
+        <p class="lead">Tu centro gamer en Huancayo: PCs de alto rendimiento, PlayStation, torneos, snacks y salas VIP.</p>
+        <div class="hero-ctas">
+          <a href="#reserva" class="btn btn-primary">🎮 Reservar Ahora</a>
+          <a href="#tarifas" class="btn btn-outline">Ver tarifas</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>12</strong> PCs</li>
+          <li><strong>6</strong> Cabinas PS</li>
+          <li><strong>2</strong> Salas VIP (2º piso)</li>
+          <li><strong>+30</strong> Torneos / mes</li>
+        </ul>
       </div>
-      <div class="habitacion">
-        <img src="imagenes/hab2.jpg" alt="Habitación doble en Hotel Presidente">
-        <h3>Habitación Doble</h3>
-        <p>Desde <strong>$60</strong> por noche</p>
-        <a href="#reserva" class="btn">Reservar</a>
-      </div>
-      <div class="habitacion">
-        <img src="imagenes/hab3.jpg" alt="Suite ejecutiva en Hotel Presidente">
-        <h3>Suite Ejecutiva</h3>
-        <p>Desde <strong>$90</strong> por noche</p>
-        <a href="#reserva" class="btn">Reservar</a>
+
+      <div class="hero-media">
+        <img src="imagenes/hero-gamer.jpg" alt="Imagen Roshi Gamer" />
       </div>
     </div>
   </section>
 
-  <!-- ===== TESTIMONIOS ===== -->
-  <section class="testimonios">
-    <h2>Lo que dicen nuestros huéspedes</h2>
-    <div class="testimonios-grid">
-      <div class="testimonio">
-        <p>"Excelente atención, desayuno variado y habitaciones cómodas. ⭐⭐⭐⭐⭐"</p>
-        <span>- Juan Pérez</span>
-      </div>
-      <div class="testimonio">
-        <p>"Muy buena ubicación y trato amable del personal. ⭐⭐⭐⭐"</p>
-        <span>- María López</span>
-      </div>
-    </div>
-  </section>
+  <!-- ===== ZONAS GAMER / SERVICIOS ===== -->
+  <main>
+    <section id="servicios" class="servicios container">
+      <h2>Servicios</h2>
+      <p class="sub">Todo lo que necesitas para jugar, transmitir y competir.</p>
 
-  <!-- ===== MAPA ===== -->
-  <section class="mapa">
+      <div class="servicios-grid">
+        <article class="service-card">
+          <i class="fas fa-desktop icon"></i>
+          <h3>Cabinas PC Gamer</h3>
+          <p>PCs con CPU Ryzen 7 / Intel i7, GPU RTX 3070+, 32GB RAM y monitores 144-240Hz.</p>
+          <a href="#pc-zone" class="small-link">Ver equipos →</a>
+        </article>
+
+        <article class="service-card">
+          <i class="fas fa-gamepad icon"></i>
+          <h3>Zona PlayStation</h3>
+          <p>Cabinas PS5 con pantallas grandes y sonido 5.1 — ideales para partidas sociales.</p>
+          <a href="#play-zone" class="small-link">Ver PS →</a>
+        </article>
+
+        <article class="service-card">
+          <i class="fas fa-cookie-bite icon"></i>
+          <h3>Máquina Expendedora</h3>
+          <p>Snacks, bebidas y energizantes. Pagos con efectivo o tarjeta.</p>
+          <a href="#snacks" class="small-link">Ver productos →</a>
+        </article>
+
+        <article class="service-card">
+          <i class="fas fa-trophy icon"></i>
+          <h3>Torneos & Eventos</h3>
+          <p>Organizamos torneos semanales y ligas mensuales con premios y streaming.</p>
+          <a href="#torneos" class="small-link">Próximos →</a>
+        </article>
+
+        <article class="service-card">
+          <i class="fas fa-video icon"></i>
+          <h3>Cabinas Streaming</h3>
+          <p>Cabinas con captura y micrófonos profesionales para streamers.</p>
+          <a href="#streaming" class="small-link">Reservar →</a>
+        </article>
+
+        <article class="service-card">
+          <i class="fas fa-users-cog icon"></i>
+          <h3>Segundo Piso - VIP</h3>
+          <p>Sala privada, sonido premium, servicio de catering y organizador de torneos.</p>
+          <a href="#segundo-piso" class="small-link">Detalles →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== ESPECIFICACIONES PC (DETALLE TÉCNICO) ===== -->
+    <section id="pc-zone" class="pc-specs container">
+      <h2>Ficha técnica — PCs</h2>
+      <p class="sub">Equipos disponibles en sala principal (ejemplos).</p>
+
+      <div class="specs-grid">
+        <div class="spec-card">
+          <h4>Roshi RTX</h4>
+          <ul>
+            <li>CPU: Intel i7 12ª Gen</li>
+            <li>GPU: NVIDIA RTX 3070</li>
+            <li>RAM: 32 GB DDR4</li>
+            <li>Monitor: 240Hz 27"</li>
+            <li>Periféricos: teclado mecánico, mouse 16000 DPI, headset 7.1</li>
+          </ul>
+        </div>
+
+        <div class="spec-card">
+          <h4>Roshi Ultra</h4>
+          <ul>
+            <li>CPU: AMD Ryzen 7 5800X</li>
+            <li>GPU: NVIDIA RTX 3080</li>
+            <li>RAM: 32 GB DDR4</li>
+            <li>Monitor: 144Hz ultrawide</li>
+            <li>Periféricos: pad profesional y silla gamer</li>
+          </ul>
+        </div>
+
+        <div class="spec-card">
+          <h4>Streaming Rig</h4>
+          <ul>
+            <li>CPU: Ryzen 9</li>
+            <li>GPU: RTX 3090</li>
+            <li>Captura: Elgato 4K</li>
+            <li>Mic: Shure SM7B</li>
+            <li>Iluminación: Softbox + ringlight</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PLAYSTATION ===== -->
+    <section id="play-zone" class="play-zone container alt">
+      <h2>Zona PlayStation</h2>
+      <p class="sub">Paquetes para partidas casuales o torneos con tus amigos.</p>
+
+      <div class="play-grid">
+        <div class="play-card">
+          <h4>Cabina PS5</h4>
+          <p>1 hora → S/4 (paquete flexible)</p>
+        </div>
+        <div class="play-card">
+          <h4>Paquete Duo</h4>
+          <p>3 horas → S/9</p>
+        </div>
+        <div class="play-card">
+          <h4>Torneo Quick</h4>
+          <p>Incluye snacks y premios.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SNACKS / MÁQUINA EXPENDEDORA ===== -->
+    <section id="snacks" class="snacks container">
+      <h2>Máquina expendedora & Productos</h2>
+      <p class="sub">Productos seleccionados — siempre disponibles</p>
+
+      <div class="snack-grid">
+        <div class="snack">
+          <img src="imagenes/snack1.jpg" alt="Energético" />
+          <h5>Bebida energética</h5>
+          <p>S/6</p>
+        </div>
+        <div class="snack">
+          <img src="imagenes/snack2.jpg" alt="Chocolate" />
+          <h5>Chocolate</h5>
+          <p>S/3</p>
+        </div>
+        <div class="snack">
+          <img src="imagenes/snack3.jpg" alt="Papas" />
+          <h5>Papas fritas</h5>
+          <p>S/4</p>
+        </div>
+        <div class="snack">
+          <img src="imagenes/snack4.jpg" alt="Gaseosa" />
+          <h5>Gaseosa</h5>
+          <p>S/5</p>
+        </div>
+      </div>
+
+      <p class="note"><strong>Nota:</strong> Aceptamos pago en efectivo y POS.</p>
+    </section>
+
+    <!-- ===== TARIFAS (tabla con tus valores) ===== -->
+    <section id="tarifas" class="tarifas container alt">
+      <h2>Tarifas por tiempo</h2>
+      <p class="sub">Precios por sesión — elige tu paquete</p>
+
+      <div class="tarifas-wrap">
+        <table class="tarifas-table" aria-label="tarifas">
+          <thead>
+            <tr><th>Duración</th><th>Precio (S/.)</th><th>Observación</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1 hora</td><td>2.50</td><td>Tarifa básica por estación</td></tr>
+            <tr><td>3 horas</td><td>6.00</td><td>Ideal para sesiones</td></tr>
+            <tr><td>6 horas</td><td>10.00</td><td>Paquete de día</td></tr>
+            <tr><td>15 horas</td><td>20.00</td><td>Pack torneos / fin de semana</td></tr>
+            <tr><td>35 horas</td><td>50.00</td><td>Membresía mensual reducida</td></tr>
+            <tr><td>80 horas</td><td>100.00</td><td>Paquete premium (mejor valor)</td></tr>
+          </tbody>
+        </table>
+
+        <aside class="pricing-note">
+          <h4>Promos</h4>
+          <ul>
+            <li>Descuentos para estudiantes (presentar carnet)</li>
+            <li>Eventos corporativos: cotiza por e-mail</li>
+            <li>Membresías con prioridad en torneos</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== SEGUNDO PISO ===== -->
+    <section id="segundo-piso" class="segundo container">
+      <h2>Segundo Piso — Sala Premium</h2>
+      <p class="sub">Área exclusiva con estaciones VIP, streaming room y bar de snacks.</p>
+
+      <div class="segundo-grid">
+        <div class="segundo-card">
+          <h4>Sala VIP</h4>
+          <p>Reservas privadas, catering, y setups de alto rendimiento.</p>
+        </div>
+        <div class="segundo-card">
+          <h4>Zona Streamer</h4>
+          <p>Espacios para transmisiones en vivo con equipo profesional.</p>
+        </div>
+        <div class="segundo-card">
+          <h4>Arena eSports</h4>
+          <p>Capacidad para eventos y torneos presenciales.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESERVA (formulario) ===== -->
+    <section id="reserva" class="reserva container alt">
+      <h2>Agendar tu sesión</h2>
+      <p class="sub">Rellena los datos y te confirmamos por WhatsApp o correo.</p>
+
+      <form id="reservaForm" class="reserva-form" autocomplete="off">
+        <div class="row">
+          <label>Nombre
+            <input type="text" name="nombre" id="nombre" required placeholder="Tu nombre" />
+          </label>
+          <label>Teléfono/WhatsApp
+            <input type="tel" name="telefono" id="telefono" required placeholder="9XXXXXXXX" />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Fecha
+            <input type="date" name="fecha" id="fecha" required />
+          </label>
+          <label>Hora
+            <input type="time" name="hora" id="hora" required />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Tipo de estación
+            <select name="tipo" id="tipo">
+              <option value="pc">PC Gamer</option>
+              <option value="ps">PlayStation</option>
+              <option value="stream">Cabina Streaming</option>
+              <option value="vip">Sala VIP (2º piso)</option>
+            </select>
+          </label>
+          <label>Duración
+            <select name="duracion" id="duracion">
+              <option value="1">1 hora — S/2.50</option>
+              <option value="3">3 horas — S/6</option>
+              <option value="6">6 horas — S/10</option>
+              <option value="15">15 horas — S/20</option>
+              <option value="35">35 horas — S/50</option>
+              <option value="80">80 horas — S/100</option>
+            </select>
+          </label>
+        </div>
+
+        <label>Comentarios / Equipo (opcional)
+          <textarea name="comentarios" id="comentarios" rows="3" placeholder="¿Quieres PC específica o torneos?"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Enviar reserva</button>
+          <button type="reset" class="btn btn-outline">Limpiar</button>
+        </div>
+
+        <p class="form-note">Al enviar, te contactaremos para confirmar y reservar tu estación.</p>
+      </form>
+    </section>
+
+    <!-- ===== TORNEOS / CALENDARIO ===== -->
+    <section id="torneos" class="torneos container">
+      <h2>Calendario / Torneos</h2>
+      <ul class="events-list">
+        <li><strong>Valorant Open</strong> — Sáb 18:00 (Inscripción S/10)</li>
+        <li><strong>FIFA Cup</strong> — Dom 16:00 (Premios en especie)</li>
+        <li><strong>League Night</strong> — Mie 20:00 (Ligas semanales)</li>
+      </ul>
+      <p class="sub">¿Quieres organizar un evento? Escríbenos y te ayudamos con logística y streaming.</p>
+    </section>
+
+    <!-- ===== TESTIMONIOS ===== -->
+    <section class="testimonios container alt">
+      <h2>Testimonios</h2>
+      <div class="testimonios-grid">
+        <blockquote>«El mejor lugar para practicar y competir en Huancayo.» — AlexGamer21</blockquote>
+        <blockquote>«Servicios pro y buen ambiente. Recomendado.» — Luisa Pro</blockquote>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq container">
+      <h2>Preguntas frecuentes</h2>
+      <details open><summary>¿Aceptan reservas por WhatsApp?</summary><p>Sí. Confirmamos vía WhatsApp o llamada.</p></details>
+      <details><summary>¿Puedo pagar con tarjeta?</summary><p>Sí, contamos con POS en el local y efectivo.</p></details>
+      <details><summary>¿Hay descuentos por membresía?</summary><p>Si: packs 35h y 80h incluyen beneficios y prioridad en torneos.</p></details>
+    </section>
+  </main>
+
+  <!-- ===== MAPA & CONTACTO ===== -->
+  <section class="mapa container" id="contacto">
     <h2>Ubicación</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="map-grid">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." aria-label="mapa" loading="lazy"></iframe>
+      <div class="contact-card">
+        <h4>Contacto</h4>
+        <p>📍 Jr. Principal 123, Huancayo</p>
+        <p>📞 (064) 123456</p>
+        <p>✉ contacto@roshigamer.com</p>
+        <p><strong>Horario:</strong> 10:00 — 02:00</p>
+      </div>
+    </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="footer-container">
-      
-      <div class="footer-col">
-        <h3>Hotel Presidente</h3>
-        <p>📍 Jr. Principal 123, Huancayo - Perú</p>
-        <p>📞 (064) 123456</p>
-        <p>✉️ contacto@hotelpresidente.com</p>
+    <div class="container footer-grid">
+      <div>
+        <h4>Roshi Gamer</h4>
+        <p>Centro Gamer Presidente — Huancayo</p>
       </div>
-
-      <div class="footer-col">
-        <h3>Enlaces rápidos</h3>
+      <div>
+        <h4>Enlaces</h4>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.php">Nosotros</a></li>
-          <li><a href="creditos.php">Servicios</a></li>
-          <li><a href="convenios.php">Galería</a></li>
-          <li><a href="#reserva">Reservas</a></li>
+          <li><a href="#pc-zone">PCs</a></li>
+          <li><a href="#play-zone">Play</a></li>
+          <li><a href="#tarifas">Tarifas</a></li>
         </ul>
       </div>
-
-      <div class="footer-col">
-        <h3>Síguenos</h3>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      <div>
+        <h4>Síguenos</h4>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
-
-      <div class="footer-col">
-        <h3>Suscríbete</h3>
-        <p>Recibe promociones y noticias en tu correo.</p>
-        <form class="newsletter">
-          <input type="email" placeholder="Tu correo">
-          <button type="submit">Suscribirme</button>
-        </form>
-      </div>
     </div>
-
-    <div class="footer-bottom">
-      <p>© 2025 Hotel Presidente Huancayo. Todos los derechos reservados.</p>
+    <div class="footer-bottom container">
+      <small>© 2025 Roshi Gamer — Todos los derechos reservados</small>
     </div>
   </footer>
 
