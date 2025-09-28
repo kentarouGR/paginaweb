@@ -4,7 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Roshi Gamer — Centro Gamer Presidente Huancayo</title>
-  <meta name="description" content="Roshi Gamer: cabinas PC, PlayStation, torneos, snacks y segundo piso VIP. Reserva y tarifas." />
+  <meta name="description" content="Centro Gamer en Huancayo: PCs de alto rendimiento, PlayStation 5, torneos, snacks y salas VIP. Reserva ahora." />
+
+  <!-- SEO y redes sociales -->
+  <meta property="og:title" content="Roshi Gamer — Huancayo" />
+  <meta property="og:description" content="Centro Gamer: cabinas PC, PlayStation, torneos, snacks y segundo piso VIP." />
+  <meta property="og:image" content="imagenes/arcade.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="imagenes/roshi.png" type="image/png">
+
+  <!-- Fuentes y estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -18,42 +29,31 @@
   <header class="ch-banner">
     <div class="ch-banner__top container">
       <div class="ch-banner__logo">
-        <a href="index.html"><img src="imagenes/logo.png" alt="Logo Roshi Gamer" /></a>
+        <a href="index.html">
+          <img src="imagenes/roshi.png" alt="Logo Roshi Gamer" />
+        </a>
         <div class="brand">
           <span class="brand-name">Roshi Gamer</span>
-          <small class="brand-sub">Huanacayo</small>
+          <small class="brand-sub">Huancayo</small>
         </div>
       </div>
-    <!-- NAVEGACIÓN -->
-    <nav class="ch-nav">
-      <div class="container nav-row">
-        <button class="menu-toggle" aria-label="abrir menú"><i class="fas fa-bars"></i></button>
-        <ul class="ch-nav__menu">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#pc-zone">PCs</a></li>
-          <li><a href="#play-zone">PlayStation</a></li>
-          <li class="has-submenu">
-            <a href="#servicios" class="submenu-toggle">Servicios <i class="fas fa-caret-down"></i></a>
-            <div class="submenu">
-              <a href="#pc-zone"><i class="fas fa-desktop"></i> PCs Gamer</a>
-              <a href="#torneos"><i class="fas fa-trophy"></i> Torneos</a>
-              <a href="#streaming"><i class="fas fa-video"></i> Cabinas Streaming</a>
-              <a href="#snacks"><i class="fas fa-cookie-bite"></i> Máquina expendedora</a>
-            </div>
-          </li>
-          <li><a href="#tarifas">Tarifas</a></li>
-          <li><a href="#segundo-piso">2º Piso</a></li>
-          <li><a href="#reserva" class="btn-cta"><i class="fas fa-calendar-check"></i> Agendar</a></li>
-        </ul>
 
-        <!-- quick social -->
-        <div class="nav-social">
-          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      <!-- NAVEGACIÓN -->
+      <nav class="ch-nav">
+        <div class="container nav-row">
+          <button class="menu-toggle" aria-label="abrir menú">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="ch-nav__menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contáctenos</a></li>
+          </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <!-- ===== HERO ===== -->
@@ -75,13 +75,15 @@
       </div>
 
       <div class="hero-media">
-        <img src="imagenes/hero-gamer.jpg" alt="Imagen Roshi Gamer" />
+        <img src="imagenes/arcade.png" alt="Imagen Roshi Gamer" />
       </div>
     </div>
   </section>
 
-  <!-- ===== ZONAS GAMER / SERVICIOS ===== -->
+  <!-- ===== MAIN ===== -->
   <main>
+
+    <!-- ===== SERVICIOS ===== -->
     <section id="servicios" class="servicios container">
       <h2>Servicios</h2>
       <p class="sub">Todo lo que necesitas para jugar, transmitir y competir.</p>
@@ -131,7 +133,7 @@
       </div>
     </section>
 
-    <!-- ===== ESPECIFICACIONES PC (DETALLE TÉCNICO) ===== -->
+    <!-- ===== ESPECIFICACIONES PC ===== -->
     <section id="pc-zone" class="pc-specs container">
       <h2>Ficha técnica — PCs</h2>
       <p class="sub">Equipos disponibles en sala principal (ejemplos).</p>
@@ -180,7 +182,7 @@
       <div class="play-grid">
         <div class="play-card">
           <h4>Cabina PS5</h4>
-          <p>1 hora → S/4 (paquete flexible)</p>
+          <p>1 hora → S/4</p>
         </div>
         <div class="play-card">
           <h4>Paquete Duo</h4>
@@ -193,29 +195,29 @@
       </div>
     </section>
 
-    <!-- ===== SNACKS / MÁQUINA EXPENDEDORA ===== -->
+    <!-- ===== SNACKS ===== -->
     <section id="snacks" class="snacks container">
       <h2>Máquina expendedora & Productos</h2>
       <p class="sub">Productos seleccionados — siempre disponibles</p>
 
       <div class="snack-grid">
         <div class="snack">
-          <img src="imagenes/snack1.jpg" alt="Energético" />
+          <img src="imagenes/snack1.jpg" alt="Energético en lata" />
           <h5>Bebida energética</h5>
           <p>S/6</p>
         </div>
         <div class="snack">
-          <img src="imagenes/snack2.jpg" alt="Chocolate" />
+          <img src="imagenes/snack2.jpg" alt="Chocolate barra" />
           <h5>Chocolate</h5>
           <p>S/3</p>
         </div>
         <div class="snack">
-          <img src="imagenes/snack3.jpg" alt="Papas" />
+          <img src="imagenes/snack3.jpg" alt="Papas fritas bolsa" />
           <h5>Papas fritas</h5>
           <p>S/4</p>
         </div>
         <div class="snack">
-          <img src="imagenes/snack4.jpg" alt="Gaseosa" />
+          <img src="imagenes/snack4.jpg" alt="Gaseosa botella" />
           <h5>Gaseosa</h5>
           <p>S/5</p>
         </div>
@@ -224,7 +226,7 @@
       <p class="note"><strong>Nota:</strong> Aceptamos pago en efectivo y POS.</p>
     </section>
 
-    <!-- ===== TARIFAS (tabla con tus valores) ===== -->
+    <!-- ===== TARIFAS ===== -->
     <section id="tarifas" class="tarifas container alt">
       <h2>Tarifas por tiempo</h2>
       <p class="sub">Precios por sesión — elige tu paquete</p>
@@ -232,7 +234,11 @@
       <div class="tarifas-wrap">
         <table class="tarifas-table" aria-label="tarifas">
           <thead>
-            <tr><th>Duración</th><th>Precio (S/.)</th><th>Observación</th></tr>
+            <tr>
+              <th>Duración</th>
+              <th>Precio (S/.)</th>
+              <th>Observación</th>
+            </tr>
           </thead>
           <tbody>
             <tr><td>1 hora</td><td>2.50</td><td>Tarifa básica por estación</td></tr>
@@ -276,65 +282,7 @@
       </div>
     </section>
 
-    <!-- ===== RESERVA (formulario) ===== -->
-    <section id="reserva" class="reserva container alt">
-      <h2>Agendar tu sesión</h2>
-      <p class="sub">Rellena los datos y te confirmamos por WhatsApp o correo.</p>
-
-      <form id="reservaForm" class="reserva-form" autocomplete="off">
-        <div class="row">
-          <label>Nombre
-            <input type="text" name="nombre" id="nombre" required placeholder="Tu nombre" />
-          </label>
-          <label>Teléfono/WhatsApp
-            <input type="tel" name="telefono" id="telefono" required placeholder="9XXXXXXXX" />
-          </label>
-        </div>
-
-        <div class="row">
-          <label>Fecha
-            <input type="date" name="fecha" id="fecha" required />
-          </label>
-          <label>Hora
-            <input type="time" name="hora" id="hora" required />
-          </label>
-        </div>
-
-        <div class="row">
-          <label>Tipo de estación
-            <select name="tipo" id="tipo">
-              <option value="pc">PC Gamer</option>
-              <option value="ps">PlayStation</option>
-              <option value="stream">Cabina Streaming</option>
-              <option value="vip">Sala VIP (2º piso)</option>
-            </select>
-          </label>
-          <label>Duración
-            <select name="duracion" id="duracion">
-              <option value="1">1 hora — S/2.50</option>
-              <option value="3">3 horas — S/6</option>
-              <option value="6">6 horas — S/10</option>
-              <option value="15">15 horas — S/20</option>
-              <option value="35">35 horas — S/50</option>
-              <option value="80">80 horas — S/100</option>
-            </select>
-          </label>
-        </div>
-
-        <label>Comentarios / Equipo (opcional)
-          <textarea name="comentarios" id="comentarios" rows="3" placeholder="¿Quieres PC específica o torneos?"></textarea>
-        </label>
-
-        <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Enviar reserva</button>
-          <button type="reset" class="btn btn-outline">Limpiar</button>
-        </div>
-
-        <p class="form-note">Al enviar, te contactaremos para confirmar y reservar tu estación.</p>
-      </form>
-    </section>
-
-    <!-- ===== TORNEOS / CALENDARIO ===== -->
+    <!-- ===== TORNEOS ===== -->
     <section id="torneos" class="torneos container">
       <h2>Calendario / Torneos</h2>
       <ul class="events-list">
@@ -346,67 +294,114 @@
     </section>
 
     <!-- ===== TESTIMONIOS ===== -->
-    <section class="testimonios container alt">
-      <h2>Testimonios</h2>
-      <div class="testimonios-grid">
-        <blockquote>«El mejor lugar para practicar y competir en Huancayo.» — AlexGamer21</blockquote>
-        <blockquote>«Servicios pro y buen ambiente. Recomendado.» — Luisa Pro</blockquote>
+    <section class="testimonios" id="testimonios">
+      <div class="container">
+        <h2 class="section-title">Testimonios</h2>
+        <p class="section-subtitle">Lo que dicen nuestros jugadores</p>
+
+        <div class="testimonios-grid">
+          <div class="testimonio-card">
+            <div class="testimonio-text">
+              <p>"El mejor lugar para jugar con amigos, las PCs son súper rápidas y cómodas."</p>
+            </div>
+            <h3 class="testimonio-author">— Carlos G.</h3>
+          </div>
+
+          <div class="testimonio-card">
+            <div class="testimonio-text">
+              <p>"Excelente atención y buen ambiente gamer. 100% recomendado."</p>
+            </div>
+            <h3 class="testimonio-author">— Mariana L.</h3>
+          </div>
+
+          <div class="testimonio-card">
+            <div class="testimonio-text">
+              <p>"La conexión es increíble, sin lag y con buena velocidad. Perfecto para torneos."</p>
+            </div>
+            <h3 class="testimonio-author">— Kevin R.</h3>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ===== FAQ ===== -->
     <section class="faq container">
       <h2>Preguntas frecuentes</h2>
-      <details open><summary>¿Aceptan reservas por WhatsApp?</summary><p>Sí. Confirmamos vía WhatsApp o llamada.</p></details>
-      <details><summary>¿Puedo pagar con tarjeta?</summary><p>Sí, contamos con POS en el local y efectivo.</p></details>
-      <details><summary>¿Hay descuentos por membresía?</summary><p>Si: packs 35h y 80h incluyen beneficios y prioridad en torneos.</p></details>
+      <div class="faq-list">
+        <details open>
+          <summary>¿Aceptan reservas por WhatsApp?</summary>
+          <p>Sí. Confirmamos vía WhatsApp o llamada.</p>
+        </details>
+        <details>
+          <summary>¿Puedo pagar con tarjeta?</summary>
+          <p>Sí, contamos con POS en el local y efectivo.</p>
+        </details>
+        <details>
+          <summary>¿Hay descuentos por membresía?</summary>
+          <p>Sí: packs 35h y 80h incluyen beneficios y prioridad en torneos.</p>
+        </details>
+      </div>
     </section>
   </main>
 
-  <!-- ===== MAPA & CONTACTO ===== -->
-  <section class="mapa container" id="contacto">
-    <h2>Ubicación</h2>
-    <div class="map-grid">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." aria-label="mapa" loading="lazy"></iframe>
-      <div class="contact-card">
-        <h4>Contacto</h4>
-        <p>📍 Jr. Principal 123, Huancayo</p>
-        <p>📞 (064) 123456</p>
-        <p>✉ contacto@roshigamer.com</p>
-        <p><strong>Horario:</strong> 10:00 — 02:00</p>
+  <!-- ===== UBICACIÓN ===== -->
+  <section class="ubicacion" id="ubicacion">
+    <div class="container">
+      <h2 class="section-title">📍 Nuestra Ubicación</h2>
+      <div class="map-wrapper">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.650771453972!2d-75.2115!3d-12.065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e9632e3f26a5d%3A0x1234567890abcdef!2sHuancayo!5e0!3m2!1ses!2spe!4v1694444444444"
+          width="100%" 
+          height="350" 
+          style="border:0;" 
+          allowfullscreen 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Roshi Gamer</h4>
-        <p>Centro Gamer Presidente — Huancayo</p>
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>Centro Gamer Presidente</h3>
+        <p>Tu espacio gamer definitivo en Huancayo.</p>
+        <p><i class="fas fa-map-marker-alt"></i> Jr. Principal 123, Huancayo</p>
+        <p><i class="fas fa-phone"></i> (064) 123456</p>
       </div>
-      <div>
-        <h4>Enlaces</h4>
+
+      <div class="footer-col">
+        <h3>Enlaces rápidos</h3>
         <ul>
-          <li><a href="#pc-zone">PCs</a></li>
-          <li><a href="#play-zone">Play</a></li>
-          <li><a href="#tarifas">Tarifas</a></li>
+          <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="#pc-zone"><i class="fas fa-desktop"></i> PCs Gamer</a></li>
+          <li><a href="#play-zone"><i class="fas fa-gamepad"></i> PlayStation</a></li>
+          <li><a href="#torneos"><i class="fas fa-trophy"></i> Torneos</a></li>
+          <li><a href="#contacto"><i class="fas fa-envelope"></i> Contáctenos</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Síguenos</h4>
-        <div class="social">
+
+      <div class="footer-col">
+        <h3>Síguenos</h3>
+        <div class="social-links">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
+
     </div>
-    <div class="footer-bottom container">
-      <small>© 2025 Roshi Gamer — Todos los derechos reservados</small>
+
+    <div class="footer-bottom">
+      <p>© 2025 Roshi Gamer — Todos los derechos reservados</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- JS -->
+  <script src="scripts.js"></script>
 </body>
 </html>
