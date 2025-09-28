@@ -1,0 +1,137 @@
+/* Variables */
+:root {
+  --bg: #000;
+  --neon: #00ff41;
+  --white: #fff;
+  --muted: #cfcfcf;
+  --panel: rgba(8, 8, 8, 0.85);
+}
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Inter", "Share Tech Mono", monospace;
+  background: var(--bg);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Botón regresar */
+.btn-back {
+  padding: 15px;
+  background: #0a0a0a;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,255,65,0.15);
+}
+.btn-back a {
+  text-decoration: none;
+  background: var(--neon);
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,255,65,0.4);
+  transition: 0.3s;
+}
+.btn-back a:hover {
+  background: #00cc33;
+  box-shadow: 0 0 15px rgba(0,255,65,0.7);
+  transform: scale(1.05);
+}
+
+/* Banner */
+.banner {
+  background: linear-gradient(180deg, #000, #111);
+  padding: 30px 0;
+  text-align: center;
+  border-bottom: 2px solid rgba(0, 255, 65, 0.18);
+}
+.brand {
+  color: var(--neon);
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(0,255,65,0.4);
+}
+.slogan {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-top: 6px;
+}
+
+/* Sección base */
+section {
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(0,255,65,0.05);
+}
+section h2 {
+  text-align: center;
+  color: var(--neon);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+.resaltado { color: var(--neon); font-weight: 600; }
+
+/* Misión y visión */
+.mision-vision .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,255,65,0.1);
+}
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--neon);
+}
+
+/* Valores */
+.valores-lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  text-align: center;
+}
+.valores-lista li {
+  background: var(--panel);
+  padding: 12px;
+  border-radius: 8px;
+  color: var(--muted);
+  border: 1px solid rgba(0,255,65,0.1);
+  transition: transform 0.2s, background 0.2s;
+}
+.valores-lista li:hover {
+  transform: scale(1.05);
+  background: rgba(0,255,65,0.08);
+  color: var(--white);
+}
+
+/* Historia */
+.historia p {
+  max-width: 800px;
+  margin: auto;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Footer */
+.footer {
+  background: #0a0a0a;
+  color: var(--muted);
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(0,255,65,0.1);
+  font-size: 14px;
+}

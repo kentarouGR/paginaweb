@@ -1,0 +1,115 @@
+/* ==== RESET GENERAL ==== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;  /* Fondo negro */
+    color: #fff;
+}
+
+/* ==== BOTÓN DE REGRESAR ==== */
+.btn-regresar {
+    display: inline-block;
+    margin: 15px 20px;
+    padding: 10px 18px;
+    background: #1caa74;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+.btn-regresar:hover {
+    background: #148a5a;
+}
+
+/* ==== HEADER ==== */
+header {
+    background: #111;
+    color: #00ff66;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #00ff66;
+    box-shadow: 0 0 12px rgba(0, 255, 102, 0.4);
+}
+
+/* ==== IMAGEN PRINCIPAL ==== */
+.imagen-principal {
+    text-align: center;
+    margin: 30px 0;
+}
+.imagen-principal img {
+    max-width: 85%;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid #00ff66;
+    box-shadow: 0 0 18px rgba(0, 255, 102, 0.6);
+    transition: transform 0.4s ease;
+}
+.imagen-principal img:hover {
+    transform: scale(1.03);
+}
+
+/* ==== MINIATURAS ==== */
+.miniaturas {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Filas responsivas */
+.filas-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+}
+.filas-3 {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+}
+.filas-4 {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1100px;
+}
+
+/* ==== ITEMS ==== */
+.miniaturas .item {
+    overflow: hidden;
+    border-radius: 12px;
+    background: #111; /* Fondo oscuro */
+    border: 1px solid #00ff66;
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.miniaturas .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 102, 0.7);
+}
+
+/* Imágenes dentro del grid */
+.miniaturas img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* ==== CUADRADOS ==== */
+.cuadrado {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border-radius: 12px;
+}
+.cuadrado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}

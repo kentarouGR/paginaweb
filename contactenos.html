@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestra Ubicación</title>
+  <link rel="stylesheet" href="contactenos.css" />
+</head>
+<body>
+  <!-- Botón de regresar -->
+  <a href="index.html" class="btn-regresar">⬅ Regresar al Inicio</a>
+
+  <!-- UBICACIÓN -->
+  <section id="ubicacion" class="seccion1">
+    <div class="container">
+      <h2 class="ubicacion-title">Nuestra Ubicación</h2>
+      <h4 class="ubicacion-subtitle">Ubícanos cerca de la Universidad Continental</h4>
+
+      <!-- Mapa -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d441.3784168871996!2d-75.19916625075538!3d-12.049560400703992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e97cd6fb475cb%3A0x9bd9ae2d53609a61!2sRoshi%20Gamer!5e1!3m2!1ses-419!2spe!4v1759009284345!5m2!1ses-419!2spe"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Contacto -->
+      <div id="contactanos" class="contactanos">
+        <h3>Contáctanos</h3>
+        <form class="base-formu">
+          <div class="formu-block">
+            <input id="Coloca-nombre" type="text" name="nombre" placeholder="Nombre" class="formu-control" required />
+          </div>
+          <div class="formu-block">
+            <input id="Coloca-email" type="email" name="email" placeholder="Email" class="formu-control" required />
+          </div>
+          <div class="formu-block">
+            <textarea name="mensaje" id="Coloca-mensaje" placeholder="Mensaje" required></textarea>
+          </div>
+          <div class="formu-block">
+            <input onclick="enviardatos()" type="submit" class="boton" value="Enviar" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="contactenos.js"></script>
+</body>
+</html>
